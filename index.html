@@ -74,6 +74,23 @@
         <section class="search-hotel">
           <h2>Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <button type="button">Поиск гостиницы в Седоне</button>
+          <div class="box-form">
+          <form action="https://echo.htmlacademy.ru" method="get">
+            <p><label>Дата заезда:<input type="text" name="arrivaldate" placeholder="24 Апреля 2017"></label></p>
+            <p><label>Дата выезда:<input type="text" name="dateofdeparture" placeholder="4 Июля 2017"></label></p>
+            <p><label for="adults">Взрослые:</label>
+              <button class="btn-minus" type="button" aria-label="Минус">-</button>
+              <input type="text" name="adults" id="adults" value="2">
+              <button class="btn-plus" type="button" aria-label="Плюс">+</button>
+              <label for="children">Дети:</label>
+              <button  class="btn-minus" type="button" aria-label="Минус">-</button>
+              <input type="text" name="children" id="children" value="0">
+              <button class="btn-plus" type="button" aria-label="Минус">+</button>
+            </p>
+            <button type="submit">Найти</button>
+          </form>
+          </div>
         </section>
         <section class="maps">
           <h2 class="visibility-hidden">Карта размещения</h2>
@@ -83,9 +100,9 @@
       <footer class="main-footer">
         <div class="hashtag">#vesitsedona</div>
         <div class="social">
-          <a href="https://twitter.com/sedona" class="social-icon twitter">tw</a>
-          <a href="https://ru-ru.facebook.com/sedona" class="social-icon facebook">fb</a>
-          <a href="https://www.youtube.com/user/sedona" class="social-icon youtube">yt</a>
+          <a href="https://twitter.com/sedona" class="social-icon twitter" aria-label="twitter">tw</a>
+          <a href="https://ru-ru.facebook.com/sedona" class="social-icon facebook" aria-label="facebook">fb</a>
+          <a href="https://www.youtube.com/user/sedona" class="social-icon youtube" aria-label="youtube">yt</a>
         </div>
         <div class="autor">
           <a href="https://htmlacademy.ru/">Website by</a>
