@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "PTsans";
+  src: url('../fonts/ptsans.woff2') format('woff2'),
+  url('../fonts/ptsans.woff') format('woff');
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTsansbold";
+  src: url('../fonts/ptsansbold.woff2') format('woff2'),
+  url('../fonts/ptsansbold.woff') format('woff');
+  font-style: normal;
+}
+
+ body {
+  font-family: "PTsans", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: normal;
+  text-transform: uppercase;
+  color: #333333;
+  background-color: #f2f2f2;
+ }
+
+a {
+  text-decoration: none;
+  outline: none;
+}
+
+a:hover,
+a:focus {
+  color: #81b3d2;
+}
+
+a:active {
+  color: #333333;
+  opacity: 0.30;
+}
