@@ -99,16 +99,15 @@ ul {
 
 .intro-sedona {
   min-height: 508px;
-  padding-top: 76px;
   background: url("../img/bottom_intro.png") no-repeat,
               url("../img/background photo.jpg") no-repeat;
-  background-position: bottom, 100% ;
-  background-origin: content-box;
+  background-position: bottom, center -57px;
 }
 
 .intro-sedona img {
   display: block;
   margin: 0 auto;
+  padding-top: 76px;
 }
 
 .advantage_item {
@@ -133,6 +132,14 @@ ul {
   max-height: 256px;
   overflow: hidden;
 }
+
+.advantage_item2 {
+  display: flex;
+  min-height: 256px;
+  max-height: 256px;
+  overflow: hidden;
+}
+
 .advantage_box {
   display: flex;
   flex-direction: column;
@@ -153,7 +160,176 @@ ul {
 }
 
 .advantage_item1 .box-img {
+  margin: 0;
   width: 66.666666%;
 }
 
+.advantage_item2 .box-img {
+  margin: 0;
+  width: 66.666666%;
+}
 
+@media (min-width: 1200px) {
+.box-img img {
+  position: relative;
+  width: 100%;
+  top: -80px;
+} }
+
+@media (min-width: 768px) {
+.box-img img {
+  width: 100%;
+} }
+
+.row {
+  display: flex;
+}
+
+.accomodation,
+.food,
+.souvenirs {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 33.333333%;
+  padding-top: 160px;
+  text-align: center;
+}
+
+.accomodation p,
+.food p,
+.souvenirs p {
+  margin: 0;
+  padding-bottom: 70px;
+}
+
+.accomodation::before {
+  content: "";
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  background: url("../img/svg/icon-1.svg") no-repeat;
+  top:66px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.food::before {
+  content: "";
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  background: url("../img/svg/icon-3.svg") no-repeat;
+  top:66px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.souvenirs::before {
+  content: "";
+  position: absolute;
+  width: 76px;
+  height: 76px;
+  background: url("../img/svg/icon-2.svg") no-repeat;
+  top:66px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.advantage_item3,
+.advantage_item4,
+.advantage_item5 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 33.333333%;
+  height: 256px;
+  background-color: #eeeeee;
+  text-align: center;
+}
+
+.advantage_item3 h2,
+.advantage_item4 h2,
+.advantage_item5 h2 {
+  padding-top: 50px;
+}
+
+.advantage_item3 p,
+.advantage_item4 p,
+.advantage_item5 p {
+  padding-bottom: 65px;
+}
+
+.search-hotel {
+  height: 291px;
+  text-align: center;
+}
+
+.search-hotel h2 {
+  margin-top: 0;
+  padding-top: 58px;
+  font-size: 30px;
+}
+
+.btn-search {
+  position: relative;
+  width: 568px;
+  height: 86px;
+  margin-top: 33px;
+  border: 0;
+  background-color: #766357;
+  color: #ffffff;
+  font-family: "PTsansbold", "Arial", sans-serif;
+  font-size: 21px;
+  text-transform: uppercase;
+  outline: 0;
+}
+
+.btn-search:hover,
+.btn-search:focus {
+  background-color: #604e43;
+}
+
+.box-form {
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  width: 568px;
+  height: 396px;
+  background-color: #ffffff;
+  transform: translateX(-50%);
+}
+
+.maps {
+  position: relative;
+}
+
+.main-footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  background-color: rgba(254,254,254,.9);
+}
+
+.hashtag {
+  font-family: "PTsansbold", "Arial", sans-serif ;
+  font-size: 21px;
+}
+
+.social a {
+  display: inline-block;
+  width: 46px;
+  height: 48px;
+  background-color: #81b3d2;
+}
+
+.twitter::before {
+  content: "";
+  position: absolute;
+
+}
