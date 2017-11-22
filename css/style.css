@@ -26,6 +26,7 @@
  h2 {
   font-family: "PTsansbold", "Arial", sans-serif;
   font-size: 21px;
+  color: #000000;
  }
 
 a {
@@ -143,7 +144,7 @@ ul {
 .advantage_box {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+
   width: 33.333333%;
   background-color: #81b3d2;
   color: #ffffff;
@@ -153,6 +154,7 @@ ul {
 
 .advantage_box h2 {
   padding-top: 50px;
+  color: #ffffff;
 }
 
 .advantage_box p {
@@ -280,12 +282,14 @@ ul {
   height: 86px;
   margin-top: 33px;
   border: 0;
+  border-radius: 0;
   background-color: #766357;
   color: #ffffff;
   font-family: "PTsansbold", "Arial", sans-serif;
   font-size: 21px;
   text-transform: uppercase;
   outline: 0;
+  cursor: pointer;
 }
 
 .btn-search:hover,
@@ -303,24 +307,102 @@ ul {
   transform: translateX(-50%);
 }
 
+.box-form .search-form {
+  padding: 55px;
+}
+
+.search-form button[type="submit"] {
+  width: 458px;
+  height: 58px;
+  border: 0;
+  border-radius: 0;
+  background-color: #81b3d2;
+  color: #ffffff;
+  font-family: "PTsansbold", "Arial", sans-serif;
+  font-size: 21px;
+  text-transform: uppercase;
+  outline: 0;
+  cursor: pointer;
+
+}
+
+.search-form p {
+  text-align: left;
+}
+
+.search-form input[name="arrivaldate"],
+.search-form input[name="dateofdeparture"] {
+    width: 281px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    padding: 4px 40px 4px 15px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 26px;
+    font-family: "PTsans","Arial",sans-serif;
+    color: #000;
+    text-transform: uppercase;
+    background: #f2f2f2;
+    border: 2px solid #f2f2f2;
+    outline: none;
+}
+
+.search-form label {
+  font: inherit;
+  font-weight: 700;
+}
+
+.search-form input[name="adults"],
+.search-form input[name="children"],
+.btn-plus,
+.btn-minus {
+  margin: -2px;
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  text-align: center;
+  font: inherit;
+  font-weight: 700;
+}
+
+.search-form button[type="submit"]:hover,
+.search-form button[type="submit"]:focus {
+  background-color: #669ec0;
+}
+
 .maps {
   position: relative;
 }
 
-.main-footer {
+.maps .main-footer {
   position: absolute;
   bottom: 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   width: 100%;
+
+}
+
+.main-footer {
+  display: flex;
+  align-items: center;
+  text-align: center;
   height: 120px;
   background-color: rgba(254,254,254,.9);
+}
+
+.hashtag,
+.social,
+.autor {
+  width: 33.333333%;
 }
 
 .hashtag {
   font-family: "PTsansbold", "Arial", sans-serif ;
   font-size: 21px;
+  color: #000000;
 }
 
 .social a {
@@ -330,8 +412,11 @@ ul {
   background-color: #81b3d2;
 }
 
-.twitter::before {
-  content: "";
-  position: absolute;
+.social a:nth-child(2) {
+  margin-left: 6px;
+  margin-right: 6px;
+}
 
+.autor span {
+  padding-right: 9px;
 }
