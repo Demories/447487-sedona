@@ -12,7 +12,7 @@
         <nav class="main-nav">
           <a class="logo-company"><img src="img/logo.png" alt="Логотип Седона" width="138" height="70"></a>
           <ul>
-            <li><a href="info.html">Информация</a></li>
+            <li><a>Информация</a></li>
             <li><a href="media.html">Фото и Видео</a></li>
             <li><a href="maps.html">Карта штата</a></li>
             <li><a href="hotels.html">Гостиницы</a></li>
@@ -21,10 +21,11 @@
       </header>
       <main>
         <section class="intro-sedona">
+          <h2 class="visually-hidden">Добро пожаловать в Sedona</h2>
           <img src="img/intro.png" alt="Добро пожаловать в Sedona" width="458" height="352">
         </section>
         <section class="advantage">
-          <div class="advantage_item">
+          <div class="advantage_intro">
           <h2>Седона - небольшой городок в Аризоне,<br>заслуживающий большего!</h2>
           <p>Раcсмотрим 5 причин, по которым седона круче, чем Гранд Каньон!</p>
           </div>
@@ -86,17 +87,26 @@
           <button class="btn-search" type="button">Поиск гостиницы в Седоне</button>
           <div class="box-form">
           <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <p><label>Дата заезда:<input type="text" name="arrivaldate" placeholder="24 АПРЕЛЯ 2017"></label></p>
-            <p><label>Дата выезда:<input type="text" name="dateofdeparture" placeholder="4 ИЮЛЯ 2017"></label></p>
-            <p><label for="adults">Взрослые:</label>
+            <p>
+              <label for="arrivaldate">Дата заезда:</label>
+              <input type="text" name="arrivaldate" id="arrivaldate" placeholder="24 АПРЕЛЯ 2017">
+              <span class="calendar"></span>
+            </p>
+            <p>
+              <label for="dateofdeparture">Дата выезда:</label>
+              <input type="text" name="dateofdeparture" id="dateofdeparture" placeholder="4 ИЮЛЯ 2017">
+              <span class="calendar"></span></p>
+            <div class="box_end">
+            <p>
+              <label for="adults">Взрослые:</label>
               <button class="btn-minus" type="button" aria-label="Минус">-</button>
               <input type="text" name="adults" id="adults" value="2">
-              <button class="btn-plus" type="button" aria-label="Плюс">+</button>
-              <label for="children">Дети:</label>
+              <button class="btn-plus" type="button" aria-label="Плюс">+</button></p>
+              <p><label for="children">Дети:</label>
               <button  class="btn-minus" type="button" aria-label="Минус">-</button>
               <input type="text" name="children" id="children" value="0">
-              <button class="btn-plus" type="button" aria-label="Минус">+</button>
-            </p>
+              <button class="btn-plus" type="button" aria-label="Минус">+</button></p>
+            </div>
             <button type="submit">Найти</button>
           </form>
           </div>
@@ -113,7 +123,7 @@
         </div>
         <div class="autor">
           <span>Website by</span>
-          <a href="https://htmlacademy.ru/"></a>
+          <a href="https://htmlacademy.ru/" aria-label="HTML Academy"></a>
         </div>
       </footer>
         </section>

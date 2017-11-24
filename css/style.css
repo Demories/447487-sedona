@@ -35,15 +35,6 @@ a {
   outline: none;
 }
 
-a:hover,
-a:focus {
-  color: #81b3d2;
-}
-
-.checked {
-  color: #766357;
-}
-
 .visually-hidden {
   position: absolute;
   clip: rect(0 0 0 0);
@@ -80,17 +71,22 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 56px;
-  padding-left: 6%;
-  padding-right: 6%;
+  padding: 17px 6% 19px;
   font-family: "PTsansbold", "Arial", sans-serif;
 }
 
-.main-nav ul li:nth-child(2) {
-  margin-right: 10%;
+.main-nav ul li {
+  width: 20%;
 }
-.main-nav ul li:nth-child(3) {
-  margin-left: 10%;
+
+.main-nav ul li:first-child,
+.main-nav ul li:nth-child(2){
+  text-align: left;
+}
+
+.main-nav ul li:nth-child(3),
+.main-nav ul li:nth-child(4) {
+  text-align: right;
 }
 
 .intro-sedona {
@@ -106,30 +102,24 @@ ul {
   padding-top: 76px;
 }
 
-.advantage_item {
+.advantage_intro {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 }
 
-.advantage_item h2 {
+.advantage_intro h2 {
   margin-top: 0;
   padding-top: 65px;
 }
 
-.advantage_item p {
+.advantage_intro p {
   padding-bottom: 60px;
 }
 
-.advantage_item1 {
-  display: flex;
-  min-height: 256px;
-  max-height: 256px;
-  overflow: hidden;
-}
-
-.advantage_item2 {
+.advantage_item1,
+.advantage_item2  {
   display: flex;
   min-height: 256px;
   max-height: 256px;
@@ -285,6 +275,7 @@ ul {
 .search-form button[type="submit"] {
   width: 458px;
   height: 58px;
+  margin-top: 24px;
   border: 0;
   border-radius: 0;
   background-color: #81b3d2;
@@ -299,7 +290,7 @@ ul {
 
 .search-form p {
   margin: 0;
-  text-align: left;
+  margin-bottom: 30px;
 }
 
 .search-form input[name="arrivaldate"],
@@ -330,7 +321,9 @@ ul {
 }
 
 .search-form input[name="adults"]:hover,
-.search-form input[name="children"]:hover {
+.search-form input[name="children"]:hover,
+.btn-plus:hover,
+.btn-minus:hover {
   background: #ebebeb;
 }
 
@@ -338,6 +331,38 @@ ul {
 .search-form input[name="children"]:focus {
   background: #ffffff;
   outline: 2px solid #e5e5e5;
+}
+
+.search-form p,
+.box_end {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.calendar {
+  position: absolute;
+  top: 50%;
+  right: 40px;
+}
+
+.search-form .calendar::before {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 22px;
+  background: url("..//img/svg/calendar.svg");
+  transform: translate(50%, -50%);
+  cursor: pointer;
+}
+
+.box_end p:first-child .btn-minus {
+  margin-left: 46px;
+}
+
+.box_end p:last-child .btn-minus {
+  margin-left: 27px;
 }
 
 .search-form label {
@@ -348,7 +373,6 @@ ul {
 .search-form input[name="children"],
 .btn-plus,
 .btn-minus {
-  margin: -2px;
   padding: 0;
   width: 38px;
   height: 38px;
@@ -359,6 +383,11 @@ ul {
   text-align: center;
   font: inherit;
   font-weight: 700;
+}
+
+.btn-plus,
+.btn-minus {
+  cursor: pointer;
 }
 
 .search-form button[type="submit"]:hover,
@@ -380,7 +409,6 @@ ul {
 .main-footer {
   display: flex;
   align-items: center;
-  text-align: center;
   height: 120px;
   background-color: rgba(254,254,254,.9);
 }
@@ -389,10 +417,11 @@ ul {
 .social,
 .autor {
   width: 33.333333%;
+  text-align: center;
 }
 
 .hashtag {
-  font-family: "PTsansbold", "Arial", sans-serif ;
+  font-family: "PTsansbold", "Arial", sans-serif;
   font-size: 21px;
   color: #000000;
 }
@@ -447,23 +476,163 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  height: 41px;
 }
 
-.autor span {
-  padding-right: 9px;
-}
-
-.autor a {
-  height: 100%;
-  padding-right: 101px;
-}
-
-.autor a::before {
-  content: "";
-  position: absolute;
+.autor a{
+  display: inline-block;
   width: 115px;
   height: 41px;
+  margin-left: 9px;
   background: url("../img/svg/logo-htmlacademy.svg") no-repeat;
 }
+
+.filters {
+  height: 217px;
+  background: url("../img/filter background.png")
+}
+
+.filters form {
+  display: flex;
+}
+
+.sorting {
+  padding: 29px 6%;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.search-results {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-results p {
+  margin: 0;
+  padding: 0;
+  font-family: "PTsansbold", "Arial", sans-serif;
+  font-size: 21px;
+}
+
+.search-results ul {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 49px;
+  width: 354px;
+  font-size: 12px;
+}
+
+.search-results li a {
+  color: rgba(0,0,0,.3);
+  border-bottom: 1px dashed #81b3d2;
+}
+
+.search-results li .sort-active {
+  color: #81b3d2;
+  border-bottom: 0;
+}
+
+.sorting-btn {
+  position: relative;
+  flex-grow: 1;
+  height: 15px;
+}
+
+.btn-up::before {
+  content: "\25b2";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 20px;
+  color: #cacaca;
+  font: inherit;
+}
+
+.btn-down::before {
+  content: "\25bc";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  right: 0;
+  font: inherit;
+}
+
+.active-btn {
+  color: #81b3d2;
+}
+.hotel {
+  display: flex;
+  justify-content: space-between;
+  padding: 29px 6%;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.hotel-img {
+  margin: 0;
+  padding: 0;
+  width: 135px;
+  height: 90px;
+  margin-right: 30px;
+}
+
+.hotel-info h2,
+.hotel-info p {
+  margin: 0;
+  padding: 0;
+}
+
+.hotel-info h2 {
+  margin-top: -6px;
+}
+
+.hotel-btn {
+  margin-top: 9px;
+}
+.hotel-btn p {
+  display: inline-block;
+}
+
+.hotel-btn p span {
+  display: block;
+}
+
+.hotel-btn p:first-child a {
+  display: block;
+  margin-top: 14px;
+  padding: 5px 16px;
+  margin-right: 6px;
+  background: #81b3d2;
+  color: #ffffff;
+}
+
+.hotel-btn p:last-child a{
+  display: block;
+  margin-top: 14px;
+  margin-top: 14px;
+  padding: 5px 16px;
+  background: #766357;
+  color: #ffffff;
+}
+
+.stars_item {
+  display: inline-block;
+  width: 18px;
+  height: 17px;
+  background: url("..//img/svg/star.svg") no-repeat;
+}
+
+.rating-hotel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-grow: 1;
+}
+
+.rating-hotel p {
+  margin: 0;
+  padding: 5px 16px;
+  font-size: 14px;
+  color: #666;
+  background: #f2f2f2;
+}
+
