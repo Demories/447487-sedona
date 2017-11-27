@@ -3,6 +3,7 @@
   src: url('../fonts/ptsans.woff2') format('woff2'),
   url('../fonts/ptsans.woff') format('woff');
   font-style: normal;
+  font-weight: normal;
 }
 
 @font-face {
@@ -87,6 +88,19 @@ a {
 .main-nav li:nth-child(3),
 .main-nav li:nth-child(4) {
   text-align: right;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #81b3d2;
+}
+
+.main-nav a:active {
+  color: rgba(0, 0, 0, 0.302);
+}
+
+.active-page {
+  color: #766357;
 }
 
 .intro-sedona {
@@ -258,6 +272,10 @@ a {
   background-color: #604e43;
 }
 
+.btn-search:active {
+  color: rgba(0,0,0,0.30);
+}
+
 .box-form {
   position: absolute;
   z-index: 2;
@@ -297,13 +315,12 @@ a {
 .search-form input[name="dateofdeparture"] {
   width: 281px;
   padding: 4px 40px 4px 15px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 26px;
-  font-family: "PTsans","Arial",sans-serif;
   color: #000000;
   background: #f2f2f2;
   border: 2px solid #f2f2f2;
+  font-size: 14px;
+  line-height: 26px;
+  font-family: "PTsans","Arial",sans-serif;
   outline: none;
 }
 
@@ -320,9 +337,7 @@ a {
 }
 
 .search-form input[name="adults"]:hover,
-.search-form input[name="children"]:hover,
-.btn-plus:hover,
-.btn-minus:hover {
+.search-form input[name="children"]:hover {
   background: #ebebeb;
 }
 
@@ -381,17 +396,37 @@ a {
   outline: 0;
   text-align: center;
   font: inherit;
-  font-weight: 700;
+  color: #a9a9a9;
 }
 
 .btn-plus,
 .btn-minus {
+  font-family: "PTsansbold", "Arial", sans-serif;
+  font-size: 25px;
   cursor: pointer;
+  color: #a9a9a9;
 }
+
+.btn-plus:hover,
+.btn-plus:focus,
+.btn-minus:hover,
+.btn-minus:focus {
+  color: #000000;
+}
+
+.btn-plus:active,
+.btn-minus:active {
+  color: #81b3d2;
+}
+
 
 .search-form button[type="submit"]:hover,
 .search-form button[type="submit"]:focus {
   background-color: #669ec0;
+}
+
+.search-form button[type="submit"]:active {
+  color: rgba(0,0,0,.3);
 }
 
 .maps {
@@ -547,20 +582,32 @@ div[role='group'] input[type="checkbox"]:checked+label:before {
   opacity: 1;
 }
 
+div[role='group'] input[type="checkbox"]:disabled+label:before {
+  opacity: 0.3;
+}
+
 .price {
   display: flex;
   justify-content: space-around;
-  border: 2px solid #ffffff;
   padding: 5px 10px;
+  border: 2px solid #ffffff;
+  border-radius: 3px;
+}
+
+.price-in,
+.price-out {
+  width: 47%;
+  text-align: center;
 }
 
 .price input[type="text"] {
-  width: 50px;
+  width: 40px;
   padding: 0;
   background: transparent;
   border: 0;
   color: #ffffff;
   outline: none;
+  font: inherit;
 }
 
 .price-line {
@@ -595,15 +642,29 @@ div[role='group'] input[type="checkbox"]:checked+label:before {
   right: 0;
 }
 
+.circle:hover,
+.circle:focus {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
 div[role='group'] button[type="submit"] {
   margin: 0 auto 0 auto;
   padding: 6px 35px;
   border: 2px solid #ffffff;
+  border-radius: 3px;
   background: transparent;
   text-transform: uppercase;
+  font: inherit;
   color: #ffffff;
   outline: none;
   cursor: pointer;
+}
+
+div[role='group'] button[type="submit"]:hover,
+div[role='group'] button[type="submit"]:focus {
+  background: #ffffff;
+  color: #000000;
 }
 
 .sorting {
@@ -645,6 +706,17 @@ div[role='group'] button[type="submit"] {
   border-bottom: 0;
 }
 
+.search-results a:hover,
+.search-results a:focus {
+  color: #81b3d2;
+  border-bottom: 1px dashed #81b3d2;
+}
+
+.search-results a:active {
+  color: #000000;
+  border-bottom: 0;
+}
+
 .sorting-btn {
   position: relative;
   flex-grow: 1;
@@ -668,6 +740,15 @@ div[role='group'] button[type="submit"] {
   height: 15px;
   right: 0;
   font: inherit;
+}
+
+.btn-up:hover::before,
+.btn-down:focus::before{
+  color: #000000;
+}
+
+.btn-up:active::before {
+  color: #81b3d2;
 }
 
 .active-btn {
@@ -694,7 +775,7 @@ div[role='group'] button[type="submit"] {
   padding: 0;
 }
 
-.hotel-info h2 {
+.hotel-info a {
   margin-top: -6px;
 }
 
@@ -726,6 +807,33 @@ div[role='group'] button[type="submit"] {
   padding: 5px 16px;
   background: #766357;
   color: #ffffff;
+}
+
+.hotel-btn p:first-child a:hover,
+.hotel-btn p:first-child a:focus {
+  background: #669ec0;
+}
+
+.hotel-btn p:first-child a:active {
+  color: rgba(255, 255, 255, 0.302);
+}
+
+.hotel-btn p:last-child a:hover,
+.hotel-btn p:last-child a:focus {
+  background: #604e43;
+}
+
+.hotel-btn p:last-child a:active {
+  color: rgba(255, 255, 255, 0.302);
+}
+
+.hotel-info a h2:hover,
+.hotel-info a h2:focus {
+  color: #81b3d2;
+}
+
+.hotel-info a h2:active {
+  color: rgba(0, 0, 0, 0.302);
 }
 
 .stars_item {
