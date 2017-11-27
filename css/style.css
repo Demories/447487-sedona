@@ -1,7 +1,7 @@
 @font-face {
   font-family: "PTsans";
   src: url('../fonts/ptsans.woff2') format('woff2'),
-  url('../fonts/ptsans.woff') format('woff');
+       url('../fonts/ptsans.woff') format('woff');
   font-style: normal;
   font-weight: normal;
 }
@@ -9,11 +9,11 @@
 @font-face {
   font-family: "PTsansbold";
   src: url('../fonts/ptsansbold.woff2') format('woff2'),
-  url('../fonts/ptsansbold.woff') format('woff');
+       url('../fonts/ptsansbold.woff') format('woff');
   font-style: normal;
 }
 
- body {
+body {
   margin: 0;
   padding: 0;
   font-family: "PTsans", "Arial", sans-serif;
@@ -22,13 +22,13 @@
   text-transform: uppercase;
   color: #333333;
   background-color: #f2f2f2;
- }
+}
 
- h2 {
+h2 {
   font-family: "PTsansbold", "Arial", sans-serif;
   font-size: 21px;
   color: #000000;
- }
+}
 
 a {
   color: #000000;
@@ -42,12 +42,6 @@ a {
   width: 1px;
   height: 1px;
   margin: -1px;
-}
-
-.main-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
 }
 
 .container {
@@ -69,6 +63,12 @@ a {
 }
 
 .main-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.main-nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -81,7 +81,7 @@ a {
 }
 
 .main-nav li:first-child,
-.main-nav li:nth-child(2){
+.main-nav li:nth-child(2) {
   text-align: left;
 }
 
@@ -133,7 +133,7 @@ a {
 }
 
 .advantage_item1,
-.advantage_item2  {
+.advantage_item2 {
   display: flex;
   min-height: 256px;
   max-height: 256px;
@@ -161,19 +161,23 @@ a {
   width: 66.666666%;
 }
 
-@media (min-width: 1200px) {
-.box-img img {
-  position: relative;
-  width: 100%;
-  top: -80px;
-  min-height: 408px;
-} }
+@media (min-width:1200px) {
+  .box-img img {
+    position: relative;
+    width: 100%;
+    top: -80px;
+    min-height: 408px;
+  }
 
-@media (min-width: 768px) {
-.box-img img {
-  width: 100%;
-  max-height: 256px;
-} }
+}
+
+@media (min-width:768px) {
+  .box-img img {
+    width: 100%;
+    max-height: 256px;
+  }
+
+}
 
 .row {
   display: flex;
@@ -201,7 +205,7 @@ a {
   width: 76px;
   height: 76px;
   background: url("../img/svg/icon-1.svg") no-repeat;
-  top:66px;
+  top: 66px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -212,7 +216,7 @@ a {
   width: 76px;
   height: 76px;
   background: url("../img/svg/icon-3.svg") no-repeat;
-  top:66px;
+  top: 66px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -223,7 +227,7 @@ a {
   width: 76px;
   height: 76px;
   background: url("../img/svg/icon-2.svg") no-repeat;
-  top:66px;
+  top: 66px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -273,7 +277,7 @@ a {
 }
 
 .btn-search:active {
-  color: rgba(0,0,0,0.30);
+  color: rgba(0, 0, 0, 0.30);
 }
 
 .box-form {
@@ -303,7 +307,6 @@ a {
   text-transform: uppercase;
   outline: 0;
   cursor: pointer;
-
 }
 
 .search-form p {
@@ -314,14 +317,32 @@ a {
 .search-form input[name="arrivaldate"],
 .search-form input[name="dateofdeparture"] {
   width: 281px;
+  height: 26px;
   padding: 4px 40px 4px 15px;
   color: #000000;
   background: #f2f2f2;
   border: 2px solid #f2f2f2;
   font-size: 14px;
   line-height: 26px;
-  font-family: "PTsans","Arial",sans-serif;
+  font-family: "PTsansbold", "Arial", sans-serif;
   outline: none;
+}
+
+.search-form input[name="adults"],
+.search-form input[name="children"],
+.btn-plus,
+.btn-minus {
+  padding: 0;
+  width: 38px;
+  height: 38px;
+  background-color: #f2f2f2;
+  border: 0;
+  border-radius: 0;
+  outline: 0;
+  text-align: center;
+  font-family: "PTsansbold", "Arial", sans-serif;
+  font-size: 14px;
+  color: #000000;
 }
 
 .search-form input[name="arrivaldate"]:hover,
@@ -358,17 +379,20 @@ a {
 .calendar {
   position: absolute;
   top: 50%;
-  right: 40px;
+  right: 4%;
+  transform: translate(50%, -50%);
+  fill: #cacaca;
+  cursor: pointer;
+  outline: none;
 }
 
-.search-form .calendar::before {
-  position: absolute;
-  content: "";
-  width: 21px;
-  height: 22px;
-  background: url("..//img/svg/calendar.svg");
-  transform: translate(50%, -50%);
-  cursor: pointer;
+.calendar:hover,
+.calendar:focus {
+  fill: #000000;
+}
+
+.calendar:active {
+  fill: #81b3d2;
 }
 
 .box_end p:first-child .btn-minus {
@@ -381,22 +405,6 @@ a {
 
 .search-form label {
   font-family: "PTsansbold", "Arial", sans-serif;
-}
-
-.search-form input[name="adults"],
-.search-form input[name="children"],
-.btn-plus,
-.btn-minus {
-  padding: 0;
-  width: 38px;
-  height: 38px;
-  background-color: #f2f2f2;
-  border: 0;
-  border-radius: 0;
-  outline: 0;
-  text-align: center;
-  font: inherit;
-  color: #a9a9a9;
 }
 
 .btn-plus,
@@ -419,14 +427,13 @@ a {
   color: #81b3d2;
 }
 
-
 .search-form button[type="submit"]:hover,
 .search-form button[type="submit"]:focus {
   background-color: #669ec0;
 }
 
 .search-form button[type="submit"]:active {
-  color: rgba(0,0,0,.3);
+  color: rgba(0, 0, 0, .3);
 }
 
 .maps {
@@ -437,14 +444,13 @@ a {
   position: absolute;
   bottom: 0;
   width: 100%;
-
 }
 
 .main-footer {
   display: flex;
   align-items: center;
   height: 120px;
-  background-color: rgba(254,254,254,.9);
+  background-color: rgba(254, 254, 254, .9);
 }
 
 .hashtag,
@@ -507,19 +513,35 @@ a {
   transform: translate(-50%, -50%);
 }
 
+.social-icon:hover,
+.social-icon:focus {
+  background: #669ec0;
+}
+
+.twitter:active::before,
+.facebook:active::before,
+.youtube:active::before {
+  opacity: 0.30;
+}
+
 .autor {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.autor a {
-  display: inline-block;
-  vertical-align: middle;
-  width: 115px;
-  height: 41px;
+.logo-html {
   margin-left: 9px;
-  background: url("../img/svg/logo-htmlacademy.svg") no-repeat;
+  outline: none;
+}
+
+.logo-html:hover,
+.logo-html:focus {
+  fill: #81b3d2;
+}
+
+.logo-html:active {
+  fill: #bdbbbc;
 }
 
 .filters {
@@ -620,7 +642,7 @@ div[role='group'] input[type="checkbox"]:disabled+label:before {
 
 .line {
   height: 2px;
-  background: rgba(255,255,255,.3);
+  background: rgba(255, 255, 255, .3);
 }
 
 .range {
@@ -697,7 +719,7 @@ div[role='group'] button[type="submit"]:focus {
 }
 
 .search-results li a {
-  color: rgba(0,0,0,.3);
+  color: rgba(0, 0, 0, .3);
   border-bottom: 1px dashed #81b3d2;
 }
 
@@ -706,54 +728,44 @@ div[role='group'] button[type="submit"]:focus {
   border-bottom: 0;
 }
 
-.search-results a:hover,
-.search-results a:focus {
+.search-results li a:hover,
+.search-results li a:focus {
   color: #81b3d2;
   border-bottom: 1px dashed #81b3d2;
 }
 
-.search-results a:active {
+.search-results li a:active {
   color: #000000;
   border-bottom: 0;
 }
 
 .sorting-btn {
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
   flex-grow: 1;
-  height: 15px;
 }
 
-.btn-up::before {
-  content: "\25b2";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  right: 20px;
-  color: #cacaca;
-  font: inherit;
+.sorting-btn svg {
+  fill: #cacaca;
 }
 
-.btn-down::before {
-  content: "\25bc";
-  position: absolute;
-  width: 15px;
-  height: 15px;
-  right: 0;
-  font: inherit;
+.btn-up {
+  margin-right: 5px;
 }
 
-.btn-up:hover::before,
-.btn-down:focus::before{
-  color: #000000;
+.btn-up svg:hover,
+.btn-down svg:focus {
+  fill: #000000;
 }
 
-.btn-up:active::before {
-  color: #81b3d2;
+.sorting-btn svg:active {
+  fill: #81b3d2;
 }
 
-.active-btn {
-  color: #81b3d2;
+.active-btn svg {
+  fill: #81b3d2;
 }
+
 .hotel {
   display: flex;
   justify-content: space-between;
@@ -782,6 +794,7 @@ div[role='group'] button[type="submit"]:focus {
 .hotel-btn {
   margin-top: 9px;
 }
+
 .hotel-btn p {
   display: inline-block;
   vertical-align: middle;
@@ -800,7 +813,7 @@ div[role='group'] button[type="submit"]:focus {
   color: #ffffff;
 }
 
-.hotel-btn p:last-child a{
+.hotel-btn p:last-child a {
   display: block;
   margin-top: 14px;
   margin-top: 14px;
