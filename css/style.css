@@ -25,13 +25,17 @@ body {
 
 }
 
-h2 {
+.advantage h2,
+.search-hotel h2,
+.hotel h2 {
   font-family: "PTsansbold", "Arial", sans-serif;
   font-size: 21px;
   color: #000000;
 }
 
-a {
+.main-nav li a,
+.search-results li a,
+.hotel-info a {
   color: #000000;
   text-decoration: none;
   outline: none;
@@ -61,6 +65,8 @@ a {
 .logo-company {
   position: absolute;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
   transform: translateX(-50%);
 }
 
@@ -115,6 +121,7 @@ a {
 
 .intro-sedona {
   min-height: 508px;
+  background-color: #d9eaf2;
   background: url("../img/bottom_intro.png") no-repeat,
               url("../img/background photo.jpg") no-repeat;
   background-position: bottom, center -57px;
@@ -406,6 +413,10 @@ a {
   position: absolute;
   top: 50%;
   right: 4%;
+  width: 22px;
+  height: 22px;
+  -webkit-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
   transform: translate(50%, -50%);
   fill: #cacaca;
   cursor: pointer;
@@ -515,6 +526,8 @@ a {
   width: 17px;
   height: 15px;
   background: url("../img/svg/twitter.svg") no-repeat;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -526,6 +539,8 @@ a {
   width: 12px;
   height: 22px;
   background: url("../img/svg/fb-icon.svg") no-repeat;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -537,6 +552,8 @@ a {
   width: 20px;
   height: 16px;
   background: url("../img/svg/youtube.svg") no-repeat;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 
@@ -573,6 +590,7 @@ a {
 
 .filters {
   padding: 29px 6% 34px;
+  background-color: #766357;
   background: url("../img/filter background.png");
   color: #ffffff;
 }
@@ -595,6 +613,8 @@ a {
 
 .filter-form [role='group']:last-child {
   width: 30%;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 .filter-form [role='group']:nth-child(2) {
@@ -638,7 +658,7 @@ a {
 .price {
   display: flex;
   justify-content: space-around;
-  margin-bottom: 23px;
+  margin-top: 10px;
   padding: 5px 10px;
   border: 2px solid #ffffff;
   border-radius: 3px;
@@ -647,7 +667,6 @@ a {
 .price-in,
 .price-out {
   width: 47%;
-  margin-bottom: 9px;
   text-align: center;
 }
 
@@ -671,12 +690,13 @@ a {
 
 .line {
   height: 2px;
+  margin-top: 20px;
   background: rgba(255, 255, 255, .3);
 }
 
 .range {
   position: relative;
-  width: 80%;
+  width: 86%;
   height: 2px;
   background: #ffffff;
 }
@@ -700,7 +720,8 @@ a {
 }
 
 .filter-form [role='group'] button[type="submit"] {
-  margin: 0 auto 0 auto;
+  margin-top: 33px;
+  margin-left: 82px;
   padding: 6px 35px;
   border: 2px solid #ffffff;
   border-radius: 3px;
@@ -901,3 +922,4 @@ a {
   color: #666;
   background: #f2f2f2;
 }
+
